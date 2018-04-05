@@ -18,7 +18,7 @@ from .util import PrintError, ThreadJob
 # See https://en.wikipedia.org/wiki/ISO_4217
 CCY_PRECISIONS = {'BHD': 3, 'BIF': 0, 'BYR': 0, 'CLF': 4, 'CLP': 0,
                   'CVE': 0, 'DJF': 0, 'GNF': 0, 'IQD': 3, 'ISK': 0,
-                  'JOD': 3, 'JPY': 0, 'KMF': 0, 'KRW': 0, 'KWD': 3,
+                  'JOD': 3, 'JPY': 2, 'KMF': 0, 'KRW': 0, 'KWD': 3,
                   'LYD': 3, 'MGA': 1, 'MRO': 1, 'OMR': 3, 'PYG': 0,
                   'RWF': 0, 'TND': 3, 'UGX': 0, 'UYI': 0, 'VND': 0,
                   'VUV': 0, 'XAF': 0, 'XAU': 4, 'XOF': 0, 'XPF': 0}
@@ -113,6 +113,16 @@ class ExchangeBase(PrintError):
     def get_currencies(self):
         rates = self.get_rates('')
         return sorted([str(a) for (a, b) in rates.items() if b is not None and len(a)==3])
+
+class CoinMarketCap(ExchangeBase):
+
+    def get_rates(self, ccy):
+        json_usd = self.get_json('api.coinmarketcap.com', '/v1/ticker/fujicoin/')
+        json_eur = self.get_json('api.coinmarketcap.com', '/v1/ticker/fujicoin/?convert=EUR')
+        json_jpy = self.get_json('api.coinmarketcap.com', '/v1/ticker/fujicoin/?convert=JPY')
+        return {'USD': Decimal(json_usd[0]['price_usd']),
+                'EUR': Decimal(json_eur[0]['price_eur']),
+                'JPY': Decimal(json_jpy[0]['price_jpy'])}
 
 
 class BitcoinAverage(ExchangeBase):
@@ -488,7 +498,7 @@ class FxThread(ThreadJob):
         return self.config.get("currency", "EUR")
 
     def config_exchange(self):
-        return self.config.get('use_exchange', 'BitcoinAverage')
+        return self.config.get('use_exchange', 'CoinMarketCap')
 
     def show_history(self):
         return self.is_enabled() and self.get_history_config() and self.ccy in self.exchange.history_ccys()
@@ -500,7 +510,7 @@ class FxThread(ThreadJob):
         self.on_quotes()
 
     def set_exchange(self, name):
-        class_ = globals().get(name, BitcoinAverage)
+        class_ = globals().get(name, CoinMarketCap)
         self.print_error("using exchange", name)
         if self.config_exchange() != name:
             self.config.set_key('use_exchange', name, True)

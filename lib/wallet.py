@@ -79,7 +79,7 @@ TX_HEIGHT_UNCONFIRMED = 0
 
 def relayfee(network):
     from .simple_config import FEERATE_DEFAULT_RELAY
-    MAX_RELAY_FEE = 50000
+    MAX_RELAY_FEE = 1000000
     f = network.relay_fee if network and network.relay_fee else FEERATE_DEFAULT_RELAY
     return min(f, MAX_RELAY_FEE)
 
@@ -337,7 +337,7 @@ class Abstract_Wallet(PrintError):
         addrs = self.get_receiving_addresses()
         if len(addrs) > 0:
             if not bitcoin.is_address(addrs[0]):
-                raise WalletFileException('The addresses in this wallet are not bitcoin addresses.')
+                raise WalletFileException('The addresses in this wallet are not fujicoin addresses.')
 
     def synchronize(self):
         pass
@@ -1168,7 +1168,7 @@ class Abstract_Wallet(PrintError):
             _type, data, value = o
             if _type == TYPE_ADDRESS:
                 if not is_address(data):
-                    raise BaseException("Invalid bitcoin address: {}".format(data))
+                    raise BaseException("Invalid fujicoin address: {}".format(data))
             if value == '!':
                 if i_max is not None:
                     raise BaseException("More than one output set to spend max")
@@ -1517,7 +1517,7 @@ class Abstract_Wallet(PrintError):
         if not r:
             return
         out = copy.copy(r)
-        out['URI'] = 'bitcoin:' + addr + '?amount=' + format_satoshis(out.get('amount'))
+        out['URI'] = 'fujicoin:' + addr + '?amount=' + format_satoshis(out.get('amount'))
         status, conf = self.get_request_status(addr)
         out['status'] = status
         if conf is not None:
@@ -1591,7 +1591,7 @@ class Abstract_Wallet(PrintError):
     def add_payment_request(self, req, config):
         addr = req['address']
         if not bitcoin.is_address(addr):
-            raise Exception(_('Invalid Bitcoin address.'))
+            raise Exception(_('Invalid Fujicoin address.'))
         if not self.is_mine(addr):
             raise Exception(_('Address not in wallet.'))
 

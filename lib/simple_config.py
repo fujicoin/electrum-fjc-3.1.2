@@ -247,7 +247,7 @@ class SimpleConfig(PrintError):
         new_path = os.path.join(self.path, "wallets", "default_wallet")
 
         # default path in pre 1.9 versions
-        old_path = os.path.join(self.path, "electrum.dat")
+        old_path = os.path.join(self.path, "electrum-fjc.dat")
         if os.path.exists(old_path) and not os.path.exists(new_path):
             os.rename(old_path, new_path)
 
