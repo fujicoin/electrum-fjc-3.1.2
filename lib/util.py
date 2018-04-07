@@ -498,8 +498,8 @@ def time_difference(distance_in_time, include_seconds):
         return "over %d years" % (round(distance_in_minutes / 525600))
 
 mainnet_block_explorers = {
-    'explorer.fujicoin.org': ('http://explorer.fujicoin.org',
-                        {'tx': 'tx', 'addr': 'address'}),
+    'explorer.fujicoin.org': ('http://explorer.fujicoin.org/',
+                        {'tx': 'tx/', 'addr': 'address'}),
     'system default': ('blockchain:',
                         {'tx': 'tx', 'addr': 'address'}),
 }
