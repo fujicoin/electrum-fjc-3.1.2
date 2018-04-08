@@ -69,7 +69,7 @@ msgstr "ファイル"
 
 #: gui/qt/main_window.py:487 gui/qt/main_window.py:492
 msgid "&Filter"
-msgstr ""
+msgstr "フィルター"
 
 #: gui/qt/main_window.py:535
 msgid "&From QR code"
@@ -644,7 +644,7 @@ msgstr "シードの種類を選んで下さい"
 msgid "Choose a backup file:"
 msgstr ""
 
-#: gui/qt/installwizard.py:26
+#: gui/qt/installwizard.py:30
 msgid "Choose a password to encrypt your wallet keys."
 msgstr "ウォレットの鍵を暗号化するパスワードを入力して下さい。"
 
@@ -739,7 +739,7 @@ msgstr "パスフレーズを確認:"
 
 #: gui/qt/password_dialog.py:99
 msgid "Confirm Password:"
-msgstr "新しいパスワードをもう一度:"
+msgstr "新しいパスワードの確認:"
 
 #: gui/kivy/uix/dialogs/installwizard.py:783 gui/qt/installwizard.py:406
 msgid "Confirm Seed"
@@ -905,7 +905,7 @@ msgstr ""
 
 #: plugins/trustedcoin/trustedcoin.py:377 lib/base_wizard.py:132
 msgid "Create a new seed"
-msgstr ""
+msgstr "新しいシードを作る"
 
 #: plugins/digitalbitbox/digitalbitbox.py:208
 msgid "Create a wallet using the current seed"
@@ -1072,7 +1072,7 @@ msgstr "切断されました"
 
 #: gui/qt/main_window.py:1192
 msgid "Display the details of your transaction before signing it."
-msgstr ""
+msgstr "署名する前に取引の詳細を表示する"
 
 #: gui/kivy/uix/ui_screens/about.kv:41
 msgid "Distributed by Electrum Technologies GmbH"
@@ -1088,7 +1088,7 @@ msgstr "電子機器などに保存しないで下さい。"
 
 #: plugins/trustedcoin/trustedcoin.py:375 lib/base_wizard.py:130
 msgid "Do you want to create a new seed, or to restore a wallet using an existing seed?"
-msgstr ""
+msgstr "新しいシードを作りますか？それとも既存のシードを使ってウォレットを復元しますか？"
 
 #: gui/qt/installwizard.py:302
 msgid "Do you want to delete '{}'?"
@@ -1146,7 +1146,7 @@ msgstr ""
 
 #: gui/qt/installwizard.py:543
 msgid "Electrum communicates with remote servers to get information about your transactions and addresses. The servers all fulfill the same purpose only differing in hardware. In most cases you simply want to let Electrum pick one at random.  However if you prefer feel free to select a server manually."
-msgstr "Electrumは取引やアドレスの情報を得るためにリモートサーバーに接続します。各サーバーは独立していますが機能は同じです。Electrumはサーバーをランダムに選びますが、手動でサーバーを指定することもできます。"
+msgstr "Electrumは取引やアドレスの情報を得るためにリモートサーバーに接続します。各サーバーは独立していますが機能はどれも同じです。Electrumはサーバーを自動的に選びますが手動でサーバーを指定することも可能です。"
 
 #: gui/qt/network_dialog.py:284
 msgid "Electrum connects to several nodes in order to download block headers and find out the longest blockchain."
@@ -1451,7 +1451,7 @@ msgstr "エラー"
 
 #: gui/kivy/uix/screens.py:383 gui/qt/main_window.py:929
 msgid "Error adding payment request"
-msgstr ""
+msgstr "支払請求の追加に失敗"
 
 #: gui/qt/qrtextedit.py:53
 msgid "Error opening file"
@@ -1555,7 +1555,7 @@ msgstr "手数料"
 
 #: gui/qt/main_window.py:2645
 msgid "Fee estimation"
-msgstr ""
+msgstr "手数料の見積り"
 
 #: gui/qt/main_window.py:3114
 msgid "Fee:"
@@ -1740,7 +1740,7 @@ msgstr ""
 
 #: plugins/trustedcoin/trustedcoin.py:378 lib/base_wizard.py:133
 msgid "I already have a seed"
-msgstr ""
+msgstr "既存のシードを使用する"
 
 #: plugins/trustedcoin/qt.py:276
 msgid "I have lost my Google Authenticator account"
@@ -1853,7 +1853,7 @@ msgstr "場合によっては最大3つの釣銭用アドレスを使用して�
 
 #: lib/simple_config.py:350
 msgid "In the next block"
-msgstr "次のブロックに"
+msgstr "次のブロック"
 
 #: gui/qt/history_list.py:184
 msgid "Income"
@@ -2054,9 +2054,9 @@ msgstr "言語"
 msgid "Latvian"
 msgstr ""
 
-#: gui/qt/installwizard.py:27
+#: gui/qt/installwizard.py:31
 msgid "Leave this field empty if you want to disable encryption."
-msgstr "暗号化が必要でない場合は、テキストボックスを空のままにして下さい。"
+msgstr "暗号化が必要でない場合はテキストボックスのチェックを外して下さい。"
 
 #: plugins/ledger/qt.py:48
 msgid "Ledger Status"
@@ -2209,7 +2209,7 @@ msgstr "ネットワーク"
 #: gui/kivy/uix/dialogs/invoices.py:128 gui/qt/exception_window.py:100
 #: gui/qt/invoice_list.py:49 gui/qt/request_list.py:55 gui/qt/util.py:44
 msgid "Never"
-msgstr "今後しない"
+msgstr "無期限"
 
 #: gui/qt/seed_dialog.py:44
 msgid "Never disclose your seed."
@@ -2636,7 +2636,7 @@ msgstr "パスワードを入力して下さい。"
 
 #: gui/qt/installwizard.py:400
 msgid "Please enter your seed phrase in order to restore your wallet."
-msgstr "ウォレットを復元するため、お手持ちのシードを入力して下さい。"
+msgstr "ウォレットを復元するため既存のシードを入力して下さい。"
 
 #: lib/plugins.py:487
 msgid "Please insert your {}"
@@ -2648,7 +2648,7 @@ msgstr "関連ライブラリをインストールして下さい。（例：pyt
 
 #: lib/base_wizard.py:490
 msgid "Please note that websites and other wallets may not support these addresses yet."
-msgstr "ウェブサイトや他のウォレットはまだこのアドレス形式をサポートしていないことに注意して下さい。"
+msgstr "ウェブサイトや他のウォレットはまだSegWitのアドレス形式をサポートしていない場合があるので注意して下さい。"
 
 #: gui/kivy/uix/dialogs/installwizard.py:796
 msgid "Please paste your cosigners master public key, or scan it using the camera button."
@@ -2673,7 +2673,7 @@ msgstr "シードを確実に保存したことを確認するために、シー
 #: gui/qt/seed_dialog.py:38
 #, python-brace-format
 msgid "Please save these {0} words on paper (order is important). "
-msgstr ""
+msgstr "この{0}個の単語を順番通りに紙に記録して下さい。"
 
 #: gui/kivy/uix/screens.py:244
 msgid "Please scan a Fujicoin address or a payment request"
@@ -2744,7 +2744,7 @@ msgstr "次へをクリックして、復号化するデバイスを選択しま
 
 #: gui/qt/installwizard.py:198
 msgid "Press 'Next' to create this wallet, or choose another file."
-msgstr "”Next”をクリックしてこのウォレットを作るか、別のファイルを選んで下さい。"
+msgstr "”次へ”をクリックしてこのウォレットを作るか、別のファイルを選んで下さい。"
 
 #: gui/qt/installwizard.py:214
 msgid "Press 'Next' to create/focus window."
@@ -3107,7 +3107,7 @@ msgstr "サーバーを自動的に選択する"
 
 #: gui/qt/installwizard.py:549
 msgid "Select server manually"
-msgstr "サーバを手動で選択する"
+msgstr "手動で選択"
 
 #: gui/qt/main_window.py:953
 msgid "Select where to save your payment request"
@@ -3364,7 +3364,7 @@ msgstr ""
 
 #: gui/qt/main_window.py:2954
 msgid "Source"
-msgstr "ソース"
+msgstr "データ取得先"
 
 #: lib/i18n.py:48
 msgid "Spanish"
@@ -3380,7 +3380,7 @@ msgstr "支払元"
 
 #: gui/qt/main_window.py:2840
 msgid "Spend only confirmed coins"
-msgstr "承認されたコインだけ消費"
+msgstr "承認されたコインだけ使う"
 
 #: gui/qt/main_window.py:2841
 msgid "Spend only confirmed inputs."
@@ -3400,7 +3400,7 @@ msgstr "開始"
 
 #: gui/qt/main_window.py:2647
 msgid "Static"
-msgstr "静的"
+msgstr "Static"
 
 #: gui/kivy/uix/ui_screens/invoice.kv:34 gui/kivy/uix/ui_screens/network.kv:15
 #: gui/qt/invoice_list.py:36 gui/qt/network_dialog.py:288
@@ -3629,7 +3629,7 @@ msgstr ""
 
 #: gui/qt/seed_dialog.py:39
 msgid "This seed will allow you to recover your wallet in case of computer failure."
-msgstr "このシードで、コンピュータの故障などの場合にウォレットを復活させることができます。"
+msgstr "コンピュータの故障などの場合にこのシードを使ってウォレットを復活させることができます。"
 
 #: gui/qt/transaction_dialog.py:163
 msgid "This transaction is not saved. Close anyway?"
@@ -3673,7 +3673,7 @@ msgstr "このウォレットはオフラインにて復元されました。表
 
 #: lib/base_wizard.py:491
 msgid "Thus, you might want to keep using a non-segwit wallet in order to be able to receive fujicoins during the transition period."
-msgstr "だから、この移行期に富士コインを受け取るために、あなたはSegWitではないウォレットを継続して使用することを望むでしょう。"
+msgstr "現在は移行期ですから富士コインを受け取るにはスタンダードウォレットを継続して使用する方が無難です。"
 
 #: gui/qt/main_window.py:2641
 msgid "Time based: fee rate is based on average confirmation time estimates"
@@ -3711,7 +3711,7 @@ msgstr "送金可能なウォレットを作るにはマスター秘密鍵を入
 
 #: lib/base_wizard.py:179
 msgid "To create a watching-only wallet, please enter your master public key (xpub/ypub/zpub)."
-msgstr "監視専用のウォレットを作るにはマスター公開鍵を入力して下さい。(xpub/ypub/zpub)"
+msgstr "監視専用のウォレットを作るためにマスター公開鍵を入力して下さい。(xpub/ypub/zpub)"
 
 #: gui/qt/exception_window.py:76
 msgid "To help us diagnose and fix the problem, you can send us a bug report that contains useful debug information:"
@@ -3907,7 +3907,7 @@ msgstr ""
 
 #: gui/qt/main_window.py:2665
 msgid "Use Replace-By-Fee"
-msgstr "Replace-By-Feeを使用する"
+msgstr "Replace-By-Feeを使用"
 
 #: gui/qt/network_dialog.py:266
 msgid "Use Tor Proxy"
@@ -4285,7 +4285,7 @@ msgstr "あなたのウォレットファイルは{}です。"
 
 #: gui/qt/installwizard.py:417 gui/qt/seed_dialog.py:194
 msgid "Your wallet generation seed is:"
-msgstr "ウォレットの再生用シードです:"
+msgstr "新しいウォレットのシードです:"
 
 #: plugins/trustedcoin/qt.py:176
 msgid "Your wallet has {} prepaid transactions."
