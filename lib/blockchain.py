@@ -355,6 +355,7 @@ class Blockchain(util.PrintError):
         n = self.height() // 2016
         for index in range(n):
             h = self.get_hash((index+1) * 2016 -1)
-            target = self.get_target(index)
+            #target = self.get_target(index)
+            target = 0
             cp.append((h, target))
         return cp
